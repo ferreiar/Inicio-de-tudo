@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Tiny5&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.titulo{
+    font-family: Pacifico;
+    color:#FFA34B;
+    font-size: 60px;
+}
+/* Estilização do corpo */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #56639A;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* Container do carrossel */
+.carrossel-container {
+    position: relative;
+    width: 400px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Carrossel */
+.carrossel {
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    border: 3px solid #EB4E89;
+    border-radius: 15px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Aumentado para 0.8s com easing mais suave */
+    width: 100%;
+}
+
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Botões de navegação */
+.nav {
+    background: #FFA34B;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Posicionamento fora do carrossel */
+.nav.anterior {
+    margin-right: 10px;
+}
+
+.nav.proximo {
+    margin-left: 10px;
+}
+
+/* Contador */
+#contador {
+    background: #56639A;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    margin-top: 50px;
+    border: 3px solid #EB4E89;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #EB6E8D;
+}
+
+.tempo {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tempo div {
+    background: #56639A;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #FBA4B8;
+    border: 1px solid #FFA34B;
+}
+
+.tempo span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.conteiner{
+    margin-top: 50px;
+    height: 3px;
+    width: 300px;
+    background: #EB4E89;
+}
+
+.subTitulo{
+    font-family: Pacifico;
+    color:#FFA34B;
+    font-size: 40px;
+}
+
+.escrita{
+    font-family: Sour Gummy;
+    color: white;
+    font-size: 25px;
+}
+
+.corRC{
+    color:#FBA4B8
+}
+
+.corRMC{
+    color: #EB6E8D;
+}
+
+.corR{
+    color: #EB4E89;
+}
+
+.corL{
+    color:#FFA34B
+}
+
+/* Media Query para telas pequenas (mobile) */
+@media (max-width: 480px) {
+    /* Ajustar a altura do carrossel */
+    .carrossel {
+        height: 500px; /* Diminuir a altura do carrossel para telas pequenas */
+    }
+
+    /* Reduzir o tamanho das setas */
+    .nav {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    /* Ajustar o tamanho do contador */
+    #contador {
+        padding: 10px 20px;
+        height: 200px;
+        width: 300px;
+    }
+
+    .tempo div {
+        font-size: 0.8rem;
+    }
+
+    .tempo span {
+        font-size: 1.3rem;
+    }
+
+    /* Ajustar o espaço no carrossel container */
+    .carrossel-container {
+        margin-top: 30px;
+    }
+}

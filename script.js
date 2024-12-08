@@ -51,4 +51,6 @@ function mudarSlide(direcao) {
     }
 
     slides.style.transform = `translateX(-${indiceAtual * 100}%)`;
+
 }
+

@@ -37,8 +37,8 @@ body {
 .carrossel {
     overflow: hidden;
     width: 100%;
-    max-width: 400px; /* Largura máxima para telas maiores */
-    aspect-ratio: 4 / 3; /* Mantém a proporção para borda e imagens */
+    max-width: 600px; /* Aumenta a largura máxima */
+    aspect-ratio: 4 / 5; /* Proporção maior */
     border: 3px solid #EB4E89;
     border-radius: 15px;
     display: flex;
@@ -48,14 +48,17 @@ body {
 
 .slides {
     display: flex;
-    transition: transform 0.8s ease-in-out;
-    width: calc(100% * 15); /* Ajuste para incluir todas as imagens */
+    transition: transform 0.8s ease-in-out; /* Animação para mudar os slides */
+    width: calc(100% * 15); /* Ajuste dinâmico para todas as imagens */
+    -webkit-transform: translate3d(0, 0, 0); /* Força renderização no Safari */
+    will-change: transform; /* Otimização de desempenho */
 }
 
 .slides img {
     width: 100%;
     height: auto;
     flex-shrink: 0;
+    -webkit-backface-visibility: hidden; /* Para problemas de renderização no Safari */
 }
 
 #img-anime {
@@ -185,7 +188,7 @@ h1 {
     /* Ajustar a altura do carrossel */
     .carrossel {
         width: 90%; /* Ajusta para ocupar 90% da tela */
-        aspect-ratio: 4 / 3; /* Mantém a proporção */
+        aspect-ratio: 4 / 5; /* Mantém a proporção */
     }
 
     .slides img {

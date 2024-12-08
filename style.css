@@ -48,8 +48,6 @@ body {
 
 .slides {
     display: flex;
-    justify-content: center;
-    align-items: center;
     transition: transform 0.8s ease-in-out; /* Animação para mudar os slides */
     width: calc(100% * 15); /* Ajuste dinâmico para todas as imagens */
     -webkit-transform: translate3d(0, 0, 0); /* Força renderização no Safari */
@@ -57,10 +55,8 @@ body {
 }
 
 .slides img {
-    margin: 0 auto;
     width: 100%;
     height: auto;
-    object-fit: cover;
     flex-shrink: 0;
     -webkit-backface-visibility: hidden; /* Para problemas de renderização no Safari */
 }
@@ -107,7 +103,7 @@ body {
 
 /* Posicionamento fora do carrossel */
 .nav.anterior {
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 .nav.proximo {
@@ -189,11 +185,11 @@ h1 {
 
 /* Media Query para telas pequenas (mobile) */
 @media (max-width: 480px) {
-    /* Ajustar a altura do carrossel */
     .carrossel {
         width: 90%; /* Ajusta para ocupar 90% da tela */
         aspect-ratio: 4 / 5; /* Mantém a proporção */
     }
+    
 
     .slides img {
         height: auto;
@@ -202,7 +198,7 @@ h1 {
     /* Reduzir o tamanho das setas */
     .nav {
         font-size: 20px;
-        padding: 10px;
+        padding: 30px;
     }
 
     /* Ajustar o tamanho do contador */

@@ -16,6 +16,12 @@ function calcularDiferenca(dataInicial) {
     let meses = agora.getMonth() - dataInicial.getMonth();
     let dias = agora.getDate() - dataInicial.getDate();
   
+     // Corrige para garantir que a hora exata seja respeitada
+      if (agora.getHours() < dataInicial.getHours() || 
+        (agora.getHours() === dataInicial.getHours() && agora.getMinutes() < dataInicial.getMinutes())) {
+        dias -= 1;
+      }
+
     if (dias < 0) {
       meses -= 1;
       dias += new Date(agora.getFullYear(), agora.getMonth(), 0).getDate();
